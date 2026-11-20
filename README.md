@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Miravana Landing Page
 
-## Getting Started
+One-page landing page for **Miravana Hotel & Resorts**, built with Next.js 16, React 19 and Tailwind CSS 3 from the Miravana design. It follows the same project structure as the other landing pages (GlowMist, Haulix, Constrix, Tastera): every piece of text, image, icon and link lives in `data/templates.json`, and the components only render it.
 
-First, run the development server:
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+  layout.tsx            fonts, metadata (title, description, favicon), header, footer, scroll reveal
+  page.tsx              the sections in page order
+  globals.css           theme colours (CSS variables)
+components/
+  common/               Header, Footer
+  sections/             Hero, About, Rooms, Why, Testimonials, Contact (+ form), FAQ (+ accordion)
+  ui/                   Icon registry, SectionHeading (eyebrow + title), LineArt (drawn decorations), helpers
+data/templates.json     all content: common (theme, metadata, company, Footer) + categories.Hotel.sections
+types/templates.types.ts
+public/images/          logos, favicon and photos (webp)
+```
 
-## Learn More
+## Sizes
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+From 1024px up the page follows the 1920px design: the root font is `min(16px, 100vw / 90)` and every size is in rem
+(1 design pixel = 0.046875rem), so 1024px shows exactly the 1440px layout, only smaller. Phones and tablets get their own stacked layout.
