@@ -1,0 +1,641 @@
+{
+  "common": {
+    "theme": {
+      "fonts": {
+        "primary": "var(--font-jost), Arial, sans-serif",
+        "heading": "var(--font-garamond), Georgia, serif",
+        "display": "var(--font-marcellus), Georgia, serif",
+        "quote": "var(--font-trirong), Georgia, serif"
+      }
+    },
+    "metadata": {
+      "title": "Miravana Hotel & Resorts | Luxury Stays, Rooms & Villas",
+      "description": "Indulge in world-class comfort, serene surroundings, and exceptional hospitality at Miravana Hotel & Resorts, where every stay feels extraordinary.",
+      "icon": "/images/favicon.png",
+      "lang": "en"
+    },
+    "company": {
+      "name": "Miravana Hotel & Resorts",
+      "logo": "/images/logo.webp",
+      "logoLight": "/images/logo-light.webp",
+      "logoAlt": "Miravana Hotel & Resorts",
+      "logoWidth": 900,
+      "logoHeight": 465,
+      "contactItems": [
+        {
+          "id": "location",
+          "icon": "LuMapPin",
+          "title": "Our Location",
+          "lines": [
+            "123 Main Street,",
+            "New York, NY 10001, USA"
+          ],
+          "url": "https://www.google.com/maps/search/?api=1&query=123+Main+Street+New+York+NY+10001+USA"
+        },
+        {
+          "id": "phone",
+          "icon": "LuPhone",
+          "footerIcon": "FaPhoneAlt",
+          "title": "Call Us",
+          "lines": [
+            "+1 0000000000"
+          ],
+          "url": "tel:+10000000000"
+        },
+        {
+          "id": "email",
+          "icon": "LuMail",
+          "title": "Email Us",
+          "lines": [
+            "info@xyz.com"
+          ],
+          "url": "mailto:info@xyz.com"
+        }
+      ]
+    },
+    "Footer": {
+      "quickLinksTitle": "Quick Links",
+      "quickLinks": [
+        {
+          "id": "home",
+          "label": "Home",
+          "url": "#home"
+        },
+        {
+          "id": "about-us",
+          "label": "About Us",
+          "url": "#about"
+        },
+        {
+          "id": "services",
+          "label": "Services",
+          "url": "#why-us"
+        },
+        {
+          "id": "gallery",
+          "label": "Gallery",
+          "url": "#rooms"
+        }
+      ],
+      "usefulLinksTitle": "Useful Links",
+      "usefulLinks": [
+        {
+          "id": "faqs",
+          "label": "FAQs",
+          "url": "#faq"
+        },
+        {
+          "id": "testimonials",
+          "label": "Testimonials",
+          "url": "#testimonials"
+        },
+        {
+          "id": "contact-us",
+          "label": "Contact Us",
+          "url": "#contact"
+        }
+      ],
+      "contactTitle": "Contact Info",
+      "contactIds": [
+        "location",
+        "phone",
+        "email"
+      ],
+      "socialLabel": "Follow Miravana",
+      "socialLinks": [
+        {
+          "id": "facebook",
+          "icon": "FaFacebookF",
+          "label": "Facebook",
+          "url": "https://www.facebook.com/"
+        },
+        {
+          "id": "instagram",
+          "icon": "FaInstagram",
+          "label": "Instagram",
+          "url": "https://www.instagram.com/"
+        },
+        {
+          "id": "youtube",
+          "icon": "FaYoutube",
+          "label": "YouTube",
+          "url": "https://www.youtube.com/"
+        }
+      ],
+      "copyrightText": "© {year} Miravana Hotel & Resorts. All Rights Reserved. Powered by Lestow."
+    }
+  },
+  "categories": {
+    "Hotel": {
+      "sections": {
+        "Header": {
+          "variants": {
+            "HotelHeader1": {
+              "logoUrl": "/",
+              "homeLabel": "Miravana Hotel & Resorts — back to top",
+              "navLinks": [
+                {
+                  "id": "home",
+                  "label": "Home",
+                  "url": "#home"
+                },
+                {
+                  "id": "about-us",
+                  "label": "About Us",
+                  "url": "#about"
+                },
+                {
+                  "id": "our-rooms",
+                  "label": "Our Rooms",
+                  "url": "#rooms"
+                },
+                {
+                  "id": "why-choose-us",
+                  "label": "Why Choose Us",
+                  "url": "#why-us"
+                },
+                {
+                  "id": "testimonials",
+                  "label": "Testimonials",
+                  "url": "#testimonials"
+                },
+                {
+                  "id": "faqs",
+                  "label": "FAQs",
+                  "url": "#faq"
+                },
+                {
+                  "id": "contact-us",
+                  "label": "Contact Us",
+                  "url": "#contact"
+                }
+              ],
+              "buttonContactId": "phone",
+              "buttonIcon": "FaPhoneAlt",
+              "mainNavLabel": "Main navigation",
+              "mobileNavLabel": "Mobile navigation",
+              "openMenuLabel": "Open menu",
+              "closeMenuLabel": "Close menu"
+            }
+          }
+        },
+        "Hero": {
+          "variants": {
+            "HotelHero1": {
+              "id": "home",
+              "label": "Miravana Hotel & Resorts",
+              "titleLines": [
+                "Experience the",
+                "Elegance of",
+                "Luxury Stays"
+              ],
+              "description": "Indulge in world-class comfort, serene surroundings, and\nexceptional hospitality at Miravana, where every stay\nfeels extraordinary.",
+              "buttonText": "Explore Our Rooms",
+              "buttonUrl": "#rooms",
+              "image": "/images/hero-resort.webp",
+              "imageAlt": "Infinity pool, palm trees and a lit villa terrace at sunset by the sea",
+              "secondImage": "/images/hero-room.webp",
+              "secondImageAlt": "Guest room with navy cushions and a balcony looking out over the hills at dusk",
+              "pillImage": "/images/hero-pool.webp",
+              "pillImageAlt": "Pool deck with loungers and umbrellas above the sea"
+            }
+          }
+        },
+        "About": {
+          "variants": {
+            "HotelAbout1": {
+              "id": "about",
+              "label": "About Miravana",
+              "titleLines": [
+                "A Legacy of Luxury",
+                "and Hospitality"
+              ],
+              "description": "At Miravana, we believe that true luxury is not just about the destination,\nbut the feeling it leaves behind. Nestled in breathtaking locations, our resorts\nand hotels are designed to offer a perfect blend of elegance, comfort and\nunforgettable experiences.",
+              "images": [
+                {
+                  "id": "room",
+                  "src": "/images/about-room.webp",
+                  "alt": "Guest room with a dark throw on the bed and a balcony over the sea"
+                },
+                {
+                  "id": "pool",
+                  "src": "/images/about-pool.webp",
+                  "alt": "Infinity pool and terrace with loungers among palm trees at dusk"
+                },
+                {
+                  "id": "view",
+                  "src": "/images/about-view.webp",
+                  "alt": "Terrace overlooking green mountains and a lake"
+                }
+              ],
+              "features": [
+                {
+                  "id": "stays",
+                  "title": "Exceptional Stays",
+                  "text": "From luxurious rooms and suites to\nprivate villas, every stay is crafted\nfor your comfort and satisfaction."
+                },
+                {
+                  "id": "locations",
+                  "title": "Breathtaking Locations",
+                  "text": "Discover stunning landscapes,\nserene surroundings, and unique\ndestinations across the world."
+                }
+              ]
+            }
+          }
+        },
+        "Rooms": {
+          "variants": {
+            "HotelRooms1": {
+              "id": "rooms",
+              "label": "Our Stays",
+              "titleTop": "Explore",
+              "titleAccent": "Accommodation",
+              "description": "Choose from a range of elegantly designed rooms, suites, and villas, each offering\nthe perfect blend of comfort, style, and modern amenities.",
+              "locationIcon": "LuMapPin",
+              "badgeText": "Most Popular",
+              "rooms": [
+                {
+                  "id": "deluxe-room",
+                  "name": "Deluxe Room",
+                  "location": "Main Wing, Miravana Resort",
+                  "image": "/images/room-deluxe.webp",
+                  "imageAlt": "Deluxe Room with a navy throw and a balcony facing the sunset over the sea",
+                  "featured": false,
+                  "facts": [
+                    {
+                      "id": "guests",
+                      "icon": "LuUsers",
+                      "text": "2 Guests"
+                    },
+                    {
+                      "id": "bedrooms",
+                      "icon": "LuBedDouble",
+                      "text": "1 Bedroom"
+                    },
+                    {
+                      "id": "bathrooms",
+                      "icon": "LuBath",
+                      "text": "1 Bathroom"
+                    }
+                  ]
+                },
+                {
+                  "id": "executive-room",
+                  "name": "Executive Room",
+                  "location": "Garden View, Miravana Resort",
+                  "image": "/images/room-executive.webp",
+                  "imageAlt": "Executive Room with a sunset painting above the bed and a golden throw",
+                  "featured": false,
+                  "facts": [
+                    {
+                      "id": "guests",
+                      "icon": "LuUsers",
+                      "text": "3 Guests"
+                    },
+                    {
+                      "id": "bedrooms",
+                      "icon": "LuBedDouble",
+                      "text": "1 Bedroom"
+                    },
+                    {
+                      "id": "bathrooms",
+                      "icon": "LuBath",
+                      "text": "2 Bathrooms"
+                    }
+                  ]
+                },
+                {
+                  "id": "luxury-suite",
+                  "name": "Luxury Suite",
+                  "location": "Ocean View, Miravana Resort",
+                  "image": "/images/room-suite.webp",
+                  "imageAlt": "Luxury Suite opening onto a balcony above the ocean",
+                  "featured": true,
+                  "facts": [
+                    {
+                      "id": "guests",
+                      "icon": "LuUsers",
+                      "text": "4 Guests"
+                    },
+                    {
+                      "id": "bedrooms",
+                      "icon": "LuBedDouble",
+                      "text": "2 Bedrooms"
+                    },
+                    {
+                      "id": "bathrooms",
+                      "icon": "LuBath",
+                      "text": "2 Bathrooms"
+                    }
+                  ]
+                },
+                {
+                  "id": "private-villa",
+                  "name": "Private Villa",
+                  "location": "Poolside, Miravana Resort",
+                  "image": "/images/room-villa.webp",
+                  "imageAlt": "Private Villa with its own pool, the bedroom opening onto it among palm trees",
+                  "featured": false,
+                  "facts": [
+                    {
+                      "id": "guests",
+                      "icon": "LuUsers",
+                      "text": "6 Guests"
+                    },
+                    {
+                      "id": "bedrooms",
+                      "icon": "LuBedDouble",
+                      "text": "3 Bedrooms"
+                    },
+                    {
+                      "id": "bathrooms",
+                      "icon": "LuBath",
+                      "text": "3 Bathrooms"
+                    }
+                  ]
+                },
+                {
+                  "id": "wellness-room",
+                  "name": "Wellness Room",
+                  "location": "Spa Wing, Miravana Resort",
+                  "image": "/images/room-wellness.webp",
+                  "imageAlt": "Wellness Room in soft neutral tones",
+                  "featured": false,
+                  "facts": [
+                    {
+                      "id": "guests",
+                      "icon": "LuUsers",
+                      "text": "2 Guests"
+                    },
+                    {
+                      "id": "bedrooms",
+                      "icon": "LuBedDouble",
+                      "text": "1 Bedroom"
+                    },
+                    {
+                      "id": "bathrooms",
+                      "icon": "LuBath",
+                      "text": "1 Bathroom"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "Why": {
+          "variants": {
+            "HotelWhy1": {
+              "id": "why-us",
+              "label": "Why Choose Us",
+              "titleTop": "The Miravana",
+              "titleAccent": "Advantage",
+              "description": "More than just a stay, we offer a seamless blend of luxury, comfort, and\npersonalized hospitality that makes every visit truly special.",
+              "image": "/images/why-villa.webp",
+              "imageAlt": "Villa terrace with loungers beside the pool and palm trees at sunset",
+              "features": [
+                {
+                  "id": "accommodations",
+                  "icon": "LuBedDouble",
+                  "lines": [
+                    "Luxurious",
+                    "Accommodations"
+                  ]
+                },
+                {
+                  "id": "dining",
+                  "icon": "LuConciergeBell",
+                  "lines": [
+                    "Exquisite",
+                    "Dining"
+                  ]
+                },
+                {
+                  "id": "wellness",
+                  "icon": "PiFlowerLotus",
+                  "lines": [
+                    "Wellness",
+                    "& Relaxation"
+                  ]
+                },
+                {
+                  "id": "locations",
+                  "icon": "MvMountains",
+                  "lines": [
+                    "Scenic",
+                    "Locations"
+                  ]
+                },
+                {
+                  "id": "hospitality",
+                  "icon": "MvConcierge",
+                  "lines": [
+                    "Personalized",
+                    "Hospitality"
+                  ]
+                },
+                {
+                  "id": "amenities",
+                  "icon": "LuWifi",
+                  "lines": [
+                    "Modern",
+                    "Amenities"
+                  ]
+                },
+                {
+                  "id": "occasions",
+                  "icon": "PiUsersThree",
+                  "lines": [
+                    "Ideal for",
+                    "All Occasions"
+                  ]
+                },
+                {
+                  "id": "secure",
+                  "icon": "LuShieldCheck",
+                  "lines": [
+                    "Safe &",
+                    "Secure Stay"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "Testimonials": {
+          "variants": {
+            "HotelTestimonials1": {
+              "id": "testimonials",
+              "label": "Testimonials",
+              "titleTop": "What Our",
+              "titleAccent": "Guests Say",
+              "ratingLabel": "{stars} out of 5 stars",
+              "previousLabel": "Previous testimonial",
+              "nextLabel": "Next testimonial",
+              "items": [
+                {
+                  "id": "emily-carter",
+                  "name": "Emily Carter",
+                  "role": "Leisure Traveler",
+                  "stars": 5,
+                  "image": "/images/guest-emily.webp",
+                  "imageAlt": "Emily Carter smiling in a straw hat by the pool",
+                  "quote": "“A truly exceptional stay! The resort offers the\nperfect mix of luxury, comfort, and warm hospitality.\nEvery detail was thoughtfully taken care of.”"
+                },
+                {
+                  "id": "daniel-brooks",
+                  "name": "Daniel Brooks",
+                  "role": "Business Traveler",
+                  "stars": 5,
+                  "image": "/images/guest-daniel.webp",
+                  "imageAlt": "Daniel Brooks smiling warmly on the resort terrace by the pool",
+                  "quote": "“Calm rooms, a quick check-in and a team that\nremembered every request. The perfect base for a\nbusy week, with sunsets I will not forget.”"
+                },
+                {
+                  "id": "sophia-martin",
+                  "name": "Sophia Martin",
+                  "role": "Family Vacation",
+                  "stars": 5,
+                  "image": "/images/guest-sophia.webp",
+                  "imageAlt": "Sophia Martin smiling by the pool",
+                  "quote": "“Our villa by the pool was a dream. The children\nloved the water, we loved the quiet evenings, and\nthe staff made us feel at home.”"
+                }
+              ]
+            }
+          }
+        },
+        "Contact": {
+          "variants": {
+            "HotelContact1": {
+              "id": "contact",
+              "label": "Get in Touch",
+              "titleTop": "Contact",
+              "titleAccent": "Us",
+              "descriptionLines": [
+                "Have a question, special request, or need assistance with your stay?",
+                "We’re here to help. Reach out to our team anytime."
+              ],
+              "contactIds": [
+                "location",
+                "phone",
+                "email"
+              ]
+            }
+          }
+        },
+        "ContactForm": {
+          "variants": {
+            "HotelContactForm1": {
+              "fields": {
+                "name": "Your Name",
+                "email": "Your Email",
+                "phone": "Your Phone",
+                "checkIn": "Check-in Date",
+                "message": "Your Message"
+              },
+              "fieldIcons": {
+                "name": "LuUser",
+                "email": "LuMail",
+                "phone": "LuPhone",
+                "checkIn": "LuCalendarDays",
+                "message": "LuMessageSquareMore"
+              },
+              "button": "Send Message",
+              "sending": "Sending…",
+              "successTitle": "Thank you, {name}!",
+              "success": "We have received your message and will get back to you shortly.",
+              "closeLabel": "Close message"
+            }
+          }
+        },
+        "Faq": {
+          "variants": {
+            "HotelFaq1": {
+              "id": "faq",
+              "label": "FAQs",
+              "titleTop": "Frequently Asked",
+              "titleAccent": "Questions",
+              "description": "Find quick answers to common questions about stays, bookings, amenities, and more.",
+              "helpIcon": "MvChats",
+              "helpTitle": "Have Questions?",
+              "helpText": "Here are some of the most\ncommon questions our guests\nask before planning their stay\nat Miravana.",
+              "items": [
+                {
+                  "id": "check-in",
+                  "question": "What are the check-in and check-out times?",
+                  "answer": "Check-in is from 2:00 PM onwards, and check-out is by 11:00 AM. Early check-in or late check-out\nmay be available upon request, subject to availability."
+                },
+                {
+                  "id": "transport",
+                  "question": "Do you offer airport or local transportation?",
+                  "answer": "Yes. We arrange airport pick-up and drop-off as well as local transfers and day trips. Share your flight details when you book and our team will plan the rest."
+                },
+                {
+                  "id": "meals",
+                  "question": "Are meals included in the stay?",
+                  "answer": "Breakfast is included with every room. Half-board and full-board plans, in-room dining and private dinners can be added to any booking."
+                },
+                {
+                  "id": "family",
+                  "question": "Is the property family-friendly?",
+                  "answer": "Absolutely. We offer family rooms and villas, extra beds and cots, a kids’ pool and activities, and babysitting on request."
+                },
+                {
+                  "id": "booking",
+                  "question": "Can I modify or cancel my booking?",
+                  "answer": "Yes. Most bookings can be changed or cancelled free of charge up to 48 hours before arrival. Special offers may have their own terms, shown when you book."
+                }
+              ]
+            }
+          }
+        }
+      },
+      "templateComponents": {
+        "template-1": {
+          "shared": {
+            "Header": "HotelHeader1",
+            "Footer": "common.Footer"
+          },
+          "pages": {
+            "home": {
+              "components": [
+                {
+                  "key": "Hero",
+                  "component": "HotelHero1"
+                },
+                {
+                  "key": "About",
+                  "component": "HotelAbout1"
+                },
+                {
+                  "key": "Rooms",
+                  "component": "HotelRooms1"
+                },
+                {
+                  "key": "Why",
+                  "component": "HotelWhy1"
+                },
+                {
+                  "key": "Testimonials",
+                  "component": "HotelTestimonials1"
+                },
+                {
+                  "key": "Contact",
+                  "component": "HotelContact1"
+                },
+                {
+                  "key": "ContactForm",
+                  "component": "HotelContactForm1"
+                },
+                {
+                  "key": "Faq",
+                  "component": "HotelFaq1"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

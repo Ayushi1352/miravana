@@ -1,26 +1,64 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --font-primary: Arial, sans-serif;
+  --font-heading: Georgia, serif;
+  --font-display: Georgia, serif;
+  --font-quote: Georgia, serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Miravana theme (from the logo and the design: deep navy with warm gold on white) */
+  /* Brand */
+  --color-navy: #071b3c;
+  --color-navy-deep: #041d38;
+  --color-navy-soft: #1d3450;
+  --color-gold: #b97a32;
+  --color-gold-bright: #cc9454;
+  --color-gold-line: #d8bb94;
+  --color-gold-pale: #e6d3b8;
+  --color-star: #c58a37;
+  --color-footer-gold: #d9ad45;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  /* Text */
+  --color-text: #4d5061;
+  --color-text-soft: #6e7b8c;
+  --color-text-grey: #5d5d5e;
+  --color-text-dark: #2a2a2a;
+  --color-text-light: #929496;
+  --color-label: #49494e;
+  --color-eyebrow-soft: #405367;
+  --color-white: #ffffff;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Backgrounds and borders */
+  --color-bg-main: #fcfcfc;
+  --color-bg-header: #fefefe;
+  --color-bg-hero: #fafaf9;
+  --color-bg-tile: #f9efe2;
+  --color-bg-tile-light: #f8efe2;
+  --color-bg-form: #fffbf6;
+  --color-bg-faq-open: #fdf0e4;
+  --color-bg-footer: #0c141c;
+  --color-bg-footer-tile: #1d2229;
+  /* Shown on both sides of the page when the screen is wider than 1920px (or the browser is zoomed out). */
+  --color-bg-backdrop: #f3f1ee;
+  --color-border: #dcdbda;
+  --color-border-light: #e8e7e6;
+  --color-border-field: #d9d6d2;
+  --color-border-form: #d8b27c;
+  --color-divider-header: #d2d2d2;
+  --color-footer-divider: #2a2f37;
+  --color-footer-tile-border: #343a43;
+
+  /* Overlays */
+  --color-white-60: rgba(255, 255, 255, 0.6);
+
+  /* Shadows */
+  --color-shadow-card: rgba(7, 27, 60, 0.12);
+  --color-shadow-photo: rgba(7, 27, 60, 0.18);
+  --color-shadow-menu: rgba(7, 27, 60, 0.25);
+
+  /* Decorations drawn in code (components/ui/LineArt.tsx) */
+  --color-palm-shadow: rgba(60, 60, 60, 0.07);
+  --color-palm-sand: #f1e2cc;
 }
