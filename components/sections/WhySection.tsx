@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { WhyData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
-import { Eyebrow } from "@/components/ui/SectionHeading";
+import { Eyebrow, sectionTitleSize } from "@/components/ui/SectionHeading";
 import { sectionSpace } from "@/components/ui/sectionSpace";
 
 const line = "absolute bg-[var(--color-gold-line)]";
@@ -31,22 +31,22 @@ export const WhySection = ({ data }: { data?: WhyData }) => {
 
   return (
     <section id={data.id} className={`scroll-mt-[4.5rem] lg:scroll-mt-[6rem] ${sectionSpace}`}>
-      <div className="mx-auto grid max-w-[90rem] gap-12 px-4 sm:px-6 lg:grid-cols-[34.22rem_1fr] lg:gap-0 lg:pl-[1.875rem] lg:pr-0">
+      <div className="mx-auto grid max-w-[90rem] gap-8 px-4 sm:gap-10 sm:px-6 lg:grid-cols-[33.14rem_1fr] lg:items-center lg:gap-[3rem] lg:pl-[2.5rem] lg:pr-[3rem]">
         <FramedPhoto data={data} />
 
         {/* phones and tablets: heading first, then the photo, then the reasons (from 1024px up the photo sits on the left) */}
         <div className="contents lg:block">
           <div data-reveal className="text-center max-lg:order-first lg:text-left">
-            <Eyebrow text={data.label} tracking={0.188} textClass="text-[0.95rem] font-semibold text-[var(--color-navy)] sm:text-[1.1rem] lg:text-[1.54rem]" lineClass="w-[3rem] lg:w-[6.05rem]" className="gap-[1rem] lg:ml-[2.77rem] lg:w-fit lg:gap-[1.7rem]" />
-            <h2 className="mt-5 font-heading text-[length:min(3rem,calc((100vw-2rem)/7.6))] font-semibold leading-[1.05] text-[var(--color-navy)] sm:text-[3.6rem] lg:ml-[2.2rem] lg:mt-[0.8rem] lg:whitespace-nowrap lg:text-[4.38rem] lg:leading-none">
+            <Eyebrow text={data.label} tracking={0.188} textClass="text-[0.95rem] font-semibold text-[var(--color-navy)] sm:text-[1.1rem] lg:text-[1.54rem]" lineClass="w-[3rem] lg:w-[6.05rem]" className="gap-[1rem] lg:w-fit lg:gap-[1.7rem]" />
+            <h2 className={`mt-4 font-heading font-semibold leading-[1.08] text-[var(--color-navy)] sm:mt-5 lg:mt-[0.8rem] lg:whitespace-nowrap lg:leading-none ${sectionTitleSize}`}>
               {data.titleTop} <span className="text-[var(--color-gold)]">{data.titleAccent}</span>
             </h2>
-            <p className="mx-auto mt-5 max-w-[40rem] text-[1rem] leading-[1.6] text-[var(--color-text-grey)] sm:text-[1.1rem] lg:ml-[2.39rem] lg:mt-[0.8rem] lg:max-w-none lg:whitespace-pre-line lg:text-[1.38rem] lg:leading-[1.83rem]">
+            <p className="mx-auto mt-4 max-w-[40rem] text-[1rem] leading-[1.6] text-[var(--color-text-grey)] sm:mt-5 sm:text-[1.1rem] lg:ml-0 lg:mt-[0.8rem] lg:max-w-none lg:whitespace-pre-line lg:text-[1.38rem] lg:leading-[1.83rem]">
               {data.description}
             </p>
           </div>
 
-          <ul className="mt-10 grid grid-cols-2 gap-y-8 sm:grid-cols-4 lg:mt-[2rem] lg:w-[51.38rem] lg:gap-y-[3.24rem]">
+          <ul className="mt-6 grid grid-cols-2 gap-y-6 sm:mt-10 sm:grid-cols-4 sm:gap-y-8 lg:mt-[2rem] lg:w-full lg:gap-y-[2.75rem]">
             {data.features.map((item, index) => (
               <li
                 key={item.id}

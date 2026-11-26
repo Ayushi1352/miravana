@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { AboutData } from "@/types/templates.types";
-import { Eyebrow } from "@/components/ui/SectionHeading";
+import { Eyebrow, sectionTitleSize } from "@/components/ui/SectionHeading";
 import { sectionSpace } from "@/components/ui/sectionSpace";
 
 /** Photo sizes from the design (left, middle, right); the middle one is the large one */
@@ -29,21 +29,21 @@ export const AboutSection = ({ data }: { data?: AboutData }) => {
       <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-[4.69rem]">
         <div data-reveal className="text-center">
           <Eyebrow text={data.label} tracking={0.17} textClass="text-[0.9rem] font-normal text-[var(--color-eyebrow-soft)] sm:text-[1.05rem] lg:text-[1.27rem]" lineClass="w-[2.5rem] lg:w-[3.05rem]" className="gap-[1rem] lg:gap-[1.27rem]" />
-          <h2 className="mt-5 font-display text-[length:min(3rem,calc((100vw-2rem)/10.5))] uppercase leading-[1.05] text-[var(--color-navy-soft)] sm:text-[3.2rem] lg:relative lg:left-[0.69rem] lg:mt-[1.55rem] lg:text-[3.97rem] lg:leading-[3.98rem]">
+          <h2 className={`mt-4 font-display uppercase leading-[1.08] text-[var(--color-navy-soft)] sm:mt-5 lg:mt-[1.55rem] lg:leading-[1.02] ${sectionTitleSize}`}>
             {data.titleLines.map((line) => (
               <span key={line} className="block">
                 {line}
               </span>
             ))}
           </h2>
-          <p className="mx-auto mt-5 max-w-[44rem] text-[1rem] leading-[1.65] text-[var(--color-text-soft)] sm:text-[1.1rem] lg:mt-[1.16rem] lg:max-w-none lg:whitespace-pre-line lg:text-[1.266rem] lg:leading-[1.83rem]">
+          <p className="mx-auto mt-4 max-w-[44rem] text-[1rem] leading-[1.65] text-[var(--color-text-soft)] sm:mt-5 sm:text-[1.1rem] lg:mt-[1.16rem] lg:max-w-none lg:whitespace-pre-line lg:text-[1.266rem] lg:leading-[1.83rem]">
             {data.description}
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-[1.65rem] lg:flex lg:items-start lg:justify-between">
+        <div className="mt-7 grid gap-5 sm:mt-10 sm:grid-cols-2 sm:gap-6 lg:mt-[1.65rem] lg:flex lg:items-start lg:justify-between">
           {data.images.map((image, index) => (
-            <div key={image.id} className={index === 1 ? "contents lg:block" : "grid gap-6 lg:block"}>
+            <div key={image.id} className={index === 1 ? "contents lg:block" : "grid gap-5 sm:gap-6 lg:block"}>
               <div data-reveal data-reveal-delay={index * 100} className={`relative w-full overflow-hidden ${photoClass[index] ?? ""}`}>
                 <Image src={image.src} alt={image.alt} fill quality={90} sizes={index === 1 ? "(min-width: 1024px) 552px, 92vw" : "(min-width: 1024px) 335px, (min-width: 640px) 46vw, 92vw"} className="object-cover" />
               </div>

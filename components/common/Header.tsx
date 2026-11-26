@@ -114,7 +114,10 @@ export const Header = ({ data, company }: { data?: HeaderData; company: CompanyD
               <li key={link.id}>
                 <a
                   href={link.url}
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    document.body.style.overflow = "";
+                    setOpen(false);
+                  }}
                   className={`flex items-center justify-between border-b border-[var(--color-border-light)] py-3.5 font-sans text-lg font-medium transition-colors hover:text-[var(--color-gold)] ${
                     sectionId(link.url) === active ? "text-[var(--color-gold)]" : "text-[var(--color-navy)]"
                   }`}

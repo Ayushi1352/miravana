@@ -46,8 +46,8 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
             alt={company.logoAlt}
             width={company.logoWidth}
             height={company.logoHeight}
-            sizes="(min-width: 1024px) 375px, 240px"
-            className="col-span-2 h-auto w-[13rem] sm:col-span-3 sm:w-[15rem] lg:absolute lg:left-[4.41rem] lg:top-[6.33rem] lg:w-[23.39rem]"
+            sizes="(min-width: 1024px) 248px, 184px"
+            className="col-span-2 h-auto w-[9.5rem] sm:col-span-3 sm:w-[11.5rem] lg:absolute lg:left-[4.41rem] lg:top-[7.2rem] lg:w-[15.5rem]"
           />
           <div className="lg:absolute lg:left-[31.64rem] lg:top-[4.64rem]">
             <LinkList title={data.quickLinksTitle} links={data.quickLinks} />

@@ -1,7 +1,7 @@
 import type { FaqData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
 import { PalmBeachArt } from "@/components/ui/LineArt";
-import { Eyebrow, SectionTitle } from "@/components/ui/SectionHeading";
+import { Eyebrow, SectionTitle, sectionTitleSize } from "@/components/ui/SectionHeading";
 import { sectionSpace } from "@/components/ui/sectionSpace";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
 
@@ -14,11 +14,11 @@ export const FaqSection = ({ data }: { data?: FaqData }) => {
       <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:pl-[3.98rem] lg:pr-[3.8rem]">
         <div data-reveal className="text-center">
           <Eyebrow text={data.label} tracking={0.376} textClass="text-[0.95rem] font-medium text-[var(--color-navy)] sm:text-[1.1rem] lg:text-[1.61rem]" lineClass="w-[3rem] lg:w-[5.58rem]" className="gap-[1rem] lg:gap-[1.97rem]" />
-          <SectionTitle titleTop={data.titleTop} titleAccent={data.titleAccent} className="mt-5 text-[length:min(2.6rem,calc((100vw-2rem)/10.5))] sm:text-[3rem] lg:mt-[0.98rem] lg:text-[3.44rem]" />
-          <p className="mx-auto mt-4 max-w-[40rem] text-[1rem] leading-[1.6] text-[var(--color-text-grey)] sm:text-[1.1rem] lg:mt-[1.2rem] lg:max-w-none lg:text-[1.364rem] lg:leading-none">{data.description}</p>
+          <SectionTitle titleTop={data.titleTop} titleAccent={data.titleAccent} className={`mt-4 sm:mt-5 ${sectionTitleSize} lg:mt-[0.98rem]`} />
+          <p className="mx-auto mt-3.5 max-w-[40rem] text-[1rem] leading-[1.6] text-[var(--color-text-grey)] sm:mt-4 sm:text-[1.1rem] lg:mt-[1.2rem] lg:max-w-none lg:text-[1.364rem] lg:leading-none">{data.description}</p>
         </div>
 
-        <div className="mt-10 grid gap-10 lg:mt-[2.54rem] lg:flex lg:items-start lg:gap-0">
+        <div className="mt-7 grid gap-7 sm:mt-10 sm:gap-10 lg:mt-[2.54rem] lg:flex lg:items-start lg:gap-0">
           <div data-reveal className="text-center lg:-mt-[0.19rem] lg:w-[19.97rem] lg:shrink-0 lg:text-left">
             <span className="mx-auto grid h-[5.5rem] w-[6.8rem] place-items-center rounded-[1rem] bg-[var(--color-bg-tile-light)] text-[var(--color-gold)] lg:mx-0 lg:h-[6.33rem] lg:w-[7.88rem]">
               <Icon name={data.helpIcon} className="size-[4.6rem] lg:size-[5.9rem]" strokeWidth={1.1} />

@@ -40,10 +40,10 @@ export const TestimonialSlider = ({ data }: { data: TestimonialsData }) => {
       // a mouse over the slider pauses it; on phones and tablets a tap does not stop the autoplay
       onPointerEnter={(event) => event.pointerType === "mouse" && setPaused(true)}
       onPointerLeave={(event) => event.pointerType === "mouse" && setPaused(false)}
-      className="relative grid gap-10 lg:block lg:h-[27.7rem]"
+      className="grid gap-7 sm:gap-10 lg:grid-cols-[28rem_auto_1fr] lg:items-center lg:gap-x-[2.75rem] lg:px-[3.5rem] lg:py-[2.25rem]"
     >
       {/* photo over a navy block with thin gold lines (positions from the design) */}
-      <div data-reveal className="relative mx-auto aspect-[597/552] w-full max-w-[30rem] lg:absolute lg:left-[2.16rem] lg:top-[1.83rem] lg:w-[27.98rem] lg:max-w-none">
+      <div data-reveal className="relative mx-auto aspect-[597/552] w-full max-w-[30rem] lg:mx-0 lg:w-[28rem] lg:max-w-none">
         <span aria-hidden="true" className="absolute left-0 top-0 h-[43.3%] w-[35%] bg-[var(--color-navy-deep)]" />
         <span aria-hidden="true" className={`${line} left-[1.84%] top-[1.09%] h-[0.1rem] w-[90.3%]`} />
         <span aria-hidden="true" className={`${line} left-[91.96%] top-[1.09%] h-[3.26%] w-[0.1rem]`} />
@@ -59,49 +59,51 @@ export const TestimonialSlider = ({ data }: { data: TestimonialsData }) => {
       </div>
 
       {/* the line between the photo and the quote */}
-      <span aria-hidden="true" className="absolute left-[32.16rem] top-0 hidden h-full w-[0.14rem] bg-[var(--color-border)] lg:block" />
+      <span aria-hidden="true" className="hidden h-full min-h-[24rem] w-[0.14rem] bg-[var(--color-border)] lg:block" />
 
-      <div className="relative text-center lg:static lg:text-left">
-        <QuoteMark className="mx-auto h-[2.4rem] w-auto text-[var(--color-gold-line)] lg:absolute lg:left-[35.3rem] lg:top-[2.39rem] lg:mx-0 lg:h-[3rem]" />
+      <div className="text-center lg:text-left">
+        <QuoteMark className="mx-auto h-[2.2rem] w-auto text-[var(--color-gold-line)] sm:h-[2.4rem] lg:mx-0 lg:h-[3rem]" />
         <div aria-live="polite">
           <blockquote key={item.id} className={swap}>
-            <p className="mx-auto mt-5 max-w-[40rem] font-quote text-[1.3rem] leading-[1.45] text-[var(--color-navy)] sm:text-[1.55rem] lg:absolute lg:left-[36.05rem] lg:top-[6.44rem] lg:mt-0 lg:w-[53rem] lg:max-w-none lg:whitespace-pre-line lg:text-[2.1rem] lg:leading-[2.6rem]">
+            <p className="mx-auto mt-4 max-w-[40rem] font-quote text-[1.25rem] leading-[1.45] text-[var(--color-navy)] sm:mt-5 sm:text-[1.55rem] lg:mx-0 lg:mt-[1.4rem] lg:max-w-none lg:whitespace-pre-line lg:text-[2.05rem] lg:leading-[2.6rem]">
               {item.quote}
             </p>
-            <span aria-hidden="true" className="mx-auto mt-6 block h-[0.14rem] w-24 bg-[var(--color-gold-pale)] lg:absolute lg:left-[36.05rem] lg:top-[16.55rem] lg:mt-0 lg:w-[51.33rem]" />
-            <footer>
-              <cite className="mt-6 block font-display text-[1.7rem] not-italic leading-none text-[var(--color-navy)] lg:absolute lg:left-[36.19rem] lg:top-[18.41rem] lg:mt-0 lg:text-[2.35rem]">{item.name}</cite>
-              <span className="mt-2 block font-sans text-[1.05rem] leading-none text-[var(--color-text-light)] lg:absolute lg:left-[36.14rem] lg:top-[21.42rem] lg:mt-0 lg:text-[1.43rem]">{item.role}</span>
-              <span
-                role="img"
-                aria-label={fill(data.ratingLabel, { stars: item.stars })}
-                className="mt-4 flex justify-center gap-[0.52rem] text-[var(--color-star)] lg:absolute lg:left-[36.14rem] lg:top-[24.02rem] lg:mt-0"
-              >
-                {Array.from({ length: item.stars }, (_, n) => (
-                  <Icon key={n} name="FaStar" className="size-[1.2rem] lg:size-[1.5rem]" />
-                ))}
-              </span>
+            <span aria-hidden="true" className="mx-auto mt-5 block h-[0.14rem] w-24 bg-[var(--color-gold-pale)] sm:mt-6 lg:mx-0 lg:mt-[1.8rem] lg:w-full" />
+            <footer className="mt-5 flex flex-col items-center gap-6 sm:mt-6 lg:mt-[1.6rem] lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <cite className="block font-display text-[1.65rem] not-italic leading-none text-[var(--color-navy)] sm:text-[1.7rem] lg:text-[2.35rem]">{item.name}</cite>
+                <span className="mt-2 block font-sans text-[1.05rem] leading-none text-[var(--color-text-light)] lg:mt-[0.65rem] lg:text-[1.43rem]">{item.role}</span>
+                <span
+                  role="img"
+                  aria-label={fill(data.ratingLabel, { stars: item.stars })}
+                  className="mt-3.5 flex justify-center gap-[0.52rem] text-[var(--color-star)] sm:mt-4 lg:mt-[1.1rem] lg:justify-start"
+                >
+                  {Array.from({ length: item.stars }, (_, n) => (
+                    <Icon key={n} name="FaStar" className="size-[1.2rem] lg:size-[1.5rem]" />
+                  ))}
+                </span>
+              </div>
+
+              <div className="flex justify-center gap-[1.3rem] lg:shrink-0">
+                <button
+                  type="button"
+                  aria-label={data.previousLabel}
+                  onClick={() => go(-1)}
+                  className="grid size-14 place-items-center rounded-full border-[0.07rem] border-[var(--color-border)] bg-[var(--color-white)] text-[var(--color-navy)] transition-colors duration-300 hover:border-[var(--color-navy)] hover:bg-[var(--color-navy)] hover:text-[var(--color-white)] focus-visible:border-[var(--color-navy)] focus-visible:bg-[var(--color-navy)] focus-visible:text-[var(--color-white)] lg:size-[3.75rem]"
+                >
+                  <Icon name="LuArrowLeft" className="size-6 lg:size-[1.6rem]" strokeWidth={1.6} />
+                </button>
+                <button
+                  type="button"
+                  aria-label={data.nextLabel}
+                  onClick={() => go(1)}
+                  className="grid size-14 place-items-center rounded-full border-[0.07rem] border-[var(--color-border)] bg-[var(--color-white)] text-[var(--color-navy)] transition-colors duration-300 hover:border-[var(--color-navy)] hover:bg-[var(--color-navy)] hover:text-[var(--color-white)] focus-visible:border-[var(--color-navy)] focus-visible:bg-[var(--color-navy)] focus-visible:text-[var(--color-white)] lg:size-[3.75rem]"
+                >
+                  <Icon name="LuArrowRight" className="size-6 lg:size-[1.6rem]" strokeWidth={1.6} />
+                </button>
+              </div>
             </footer>
           </blockquote>
-        </div>
-
-        <div className="mt-8 flex justify-center gap-[1.3rem] lg:mt-0">
-          <button
-            type="button"
-            aria-label={data.previousLabel}
-            onClick={() => go(-1)}
-            className="grid size-14 place-items-center rounded-full border-[0.07rem] border-[var(--color-border)] bg-[var(--color-white)] text-[var(--color-navy)] transition-colors duration-300 hover:border-[var(--color-navy)] hover:bg-[var(--color-navy)] hover:text-[var(--color-white)] lg:absolute lg:left-[78.61rem] lg:top-[21.94rem] lg:size-[3.75rem]"
-          >
-            <Icon name="LuArrowLeft" className="size-6 lg:size-[1.6rem]" strokeWidth={1.6} />
-          </button>
-          <button
-            type="button"
-            aria-label={data.nextLabel}
-            onClick={() => go(1)}
-            className="grid size-14 place-items-center rounded-full bg-[var(--color-gold-bright)] text-[var(--color-white)] transition-colors duration-300 hover:bg-[var(--color-navy)] lg:absolute lg:left-[83.58rem] lg:top-[21.94rem] lg:size-[3.75rem]"
-          >
-            <Icon name="LuArrowRight" className="size-6 lg:size-[1.6rem]" strokeWidth={1.6} />
-          </button>
         </div>
       </div>
     </div>

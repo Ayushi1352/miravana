@@ -1,2 +1,2 @@
-/** Space above and below every section's content: the same on every screen (it scales with the page from 1024px up), so all gaps between sections match */
-export const sectionSpace = "py-16";
+/** Keep sections comfortably spaced on desktop while tightening the mobile page. */
+export const sectionSpace = "py-10 sm:py-12 lg:py-16";

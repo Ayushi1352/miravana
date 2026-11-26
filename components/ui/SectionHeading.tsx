@@ -27,7 +27,8 @@ export const Eyebrow = ({ text, textClass, tracking, lineClass, className = "" }
 );
 
 /** Bold serif capitals (Rooms, Testimonials, Contact and FAQ titles); the accent words in gold */
-export const titleClass = "font-heading font-[450] uppercase leading-none tracking-[-0.005em] text-[var(--color-navy)]";
+export const titleClass = "font-heading font-[450] uppercase leading-[1.08] tracking-[-0.005em] text-[var(--color-navy)] lg:leading-none";
+export const sectionTitleSize = "text-[length:min(2.5rem,calc((100vw-2rem)/8.8))] sm:text-[3rem] lg:text-[4rem]";
 
 type TitleProps = {
   titleTop: string;

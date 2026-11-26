@@ -24,8 +24,8 @@ export default function Home() {
       <RoomsSection data={sectionData.Rooms?.variants?.HotelRooms1} />
       <WhySection data={sectionData.Why?.variants?.HotelWhy1} />
       <TestimonialsSection data={sectionData.Testimonials?.variants?.HotelTestimonials1} />
-      <ContactSection data={sectionData.Contact?.variants?.HotelContact1} form={sectionData.ContactForm?.variants?.HotelContactForm1} company={commonData.company} />
       <FaqSection data={sectionData.Faq?.variants?.HotelFaq1} />
+      <ContactSection data={sectionData.Contact?.variants?.HotelContact1} form={sectionData.ContactForm?.variants?.HotelContactForm1} company={commonData.company} />
     </main>
   );
 }

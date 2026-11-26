@@ -1,7 +1,7 @@
 import type { CompanyData, ContactData, ContactFormData } from "@/types/templates.types";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Icon } from "@/components/ui/Icon";
-import { Eyebrow, SectionTitle } from "@/components/ui/SectionHeading";
+import { Eyebrow, SectionTitle, sectionTitleSize } from "@/components/ui/SectionHeading";
 import { sectionSpace } from "@/components/ui/sectionSpace";
 
 type Props = {
@@ -20,8 +20,8 @@ export const ContactSection = ({ data, form, company }: Props) => {
       <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-[4.31rem] lg:pr-[4.13rem]">
         <div data-reveal className="text-center">
           <Eyebrow text={data.label} tracking={0.268} textClass="text-[0.95rem] font-medium text-[var(--color-navy)] sm:text-[1.1rem] lg:text-[1.54rem]" lineClass="w-[3rem] lg:w-[5.58rem]" className="gap-[1rem] lg:gap-[1.8rem]" />
-          <SectionTitle titleTop={data.titleTop} titleAccent={data.titleAccent} className="mt-5 text-[length:min(3.2rem,calc((100vw-2rem)/6.5))] sm:text-[3.6rem] lg:mt-[1.24rem] lg:text-[4.67rem]" />
-          <p className="mx-auto mt-5 max-w-[40rem] text-[1rem] leading-[1.6] text-[var(--color-text-dark)] sm:text-[1.1rem] lg:mt-[0.92rem] lg:max-w-none lg:text-[1.415rem] lg:leading-[1.92rem]">
+          <SectionTitle titleTop={data.titleTop} titleAccent={data.titleAccent} className={`mt-4 sm:mt-5 ${sectionTitleSize} lg:mt-[1.24rem]`} />
+          <p className="mx-auto mt-4 max-w-[40rem] text-[1rem] leading-[1.6] text-[var(--color-text-dark)] sm:mt-5 sm:text-[1.1rem] lg:mt-[0.92rem] lg:max-w-none lg:text-[1.415rem] lg:leading-[1.92rem]">
             {data.descriptionLines.map((line) => (
               <span key={line} className="lg:block">
                 {line}{" "}
@@ -30,7 +30,7 @@ export const ContactSection = ({ data, form, company }: Props) => {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-10 lg:mt-[3.09rem] lg:flex lg:items-start lg:justify-between lg:gap-0">
+        <div className="mt-7 grid gap-7 sm:mt-10 sm:gap-10 lg:mt-[3.09rem] lg:flex lg:items-start lg:justify-between lg:gap-0">
           <ul data-reveal className="mx-auto grid w-full max-w-[30rem] lg:mx-0 lg:mt-[0.75rem] lg:w-[25.92rem] lg:max-w-none">
             {contactItems.map((item, index) => {
               const external = item.url.startsWith("http");

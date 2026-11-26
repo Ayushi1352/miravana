@@ -67,27 +67,27 @@
           "url": "#about"
         },
         {
-          "id": "services",
-          "label": "Services",
-          "url": "#why-us"
+          "id": "our-rooms",
+          "label": "Our Rooms",
+          "url": "#rooms"
         },
         {
-          "id": "gallery",
-          "label": "Gallery",
-          "url": "#rooms"
+          "id": "why-choose-us",
+          "label": "Why Choose Us",
+          "url": "#why-us"
         }
       ],
       "usefulLinksTitle": "Useful Links",
       "usefulLinks": [
         {
-          "id": "faqs",
-          "label": "FAQs",
-          "url": "#faq"
-        },
-        {
           "id": "testimonials",
           "label": "Testimonials",
           "url": "#testimonials"
+        },
+        {
+          "id": "faqs",
+          "label": "FAQs",
+          "url": "#faq"
         },
         {
           "id": "contact-us",
@@ -620,16 +620,16 @@
                   "component": "HotelTestimonials1"
                 },
                 {
+                  "key": "Faq",
+                  "component": "HotelFaq1"
+                },
+                {
                   "key": "Contact",
                   "component": "HotelContact1"
                 },
                 {
                   "key": "ContactForm",
                   "component": "HotelContactForm1"
-                },
-                {
-                  "key": "Faq",
-                  "component": "HotelFaq1"
                 }
               ]
             }
